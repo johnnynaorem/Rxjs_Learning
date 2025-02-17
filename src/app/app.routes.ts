@@ -19,4 +19,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'of-from',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/of-from/of-from.component').then(
+        (m) => m.OfFromComponent
+      );
+    },
+  },
 ];
