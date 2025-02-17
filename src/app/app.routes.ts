@@ -10,4 +10,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'interval',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/interval/interval.component').then(
+        (m) => m.IntervalComponent
+      );
+    },
+  },
 ];
