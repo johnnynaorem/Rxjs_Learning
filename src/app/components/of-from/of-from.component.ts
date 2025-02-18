@@ -39,5 +39,16 @@ export class OfFromComponent implements OnInit {
       const p: any = document.getElementById('fromPromise');
       p.innerHTML = res;
     });
+
+    const question: string = 'How are you bro?';
+    const Obs5 = from(question);
+
+    Obs5.subscribe((res) => {
+      console.log(res);
+      const p: any = document.getElementById('fromString');
+      const li = document.createElement('li');
+      li.innerHTML = res;
+      p.appendChild(li);
+    });
   }
 }

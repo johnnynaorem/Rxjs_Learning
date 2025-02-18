@@ -28,4 +28,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'to-array',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/to-array/to-array.component').then(
+        (m) => m.ToArrayComponent
+      );
+    },
+  },
 ];

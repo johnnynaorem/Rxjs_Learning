@@ -1,0 +1,14 @@
+<h1>to-array works!</h1>
+
+<h2>Ex-1(toArray)</h2>
+<h4>Display Observable stream into array format</h4>
+<pre>{{ objMsg | json }}</pre>
+
+<h2>Ex-2(of-Observable to Array)</h2>
+<h4>Display Observable stream into array format</h4>
+<pre>{{ objArray | json }}</pre>
+
+<h4>Displaying value that are converted from Observable</h4>
+@for (item of objArray; track $index) {
+<li>{{ item }}</li>
+}
