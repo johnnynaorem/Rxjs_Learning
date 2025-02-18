@@ -37,4 +37,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'custom-obsevable',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/custom-observable/custom-observable.component'
+      ).then((m) => m.CustomObservableComponent);
+    },
+  },
 ];

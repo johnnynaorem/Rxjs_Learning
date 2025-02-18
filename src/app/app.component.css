@@ -1,0 +1,11 @@
+ul.success li {
+  padding: 20px;
+  background-color: green;
+  color: black;
+}
+
+.error li {
+  padding: 20px;
+  background-color: red;
+  color: black;
+}

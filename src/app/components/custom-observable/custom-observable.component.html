@@ -1,0 +1,12 @@
+<h1>custom-observable works!</h1>
+
+<div>
+  <h2>Manual</h2>
+  <ul
+    id="display"
+    class="list"
+    [ngClass]="
+      status == 'completed' ? 'success' : status == 'error' ? 'error' : ''
+    "
+  ></ul>
+</div>
