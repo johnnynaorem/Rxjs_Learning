@@ -46,4 +46,13 @@ export const routes: Routes = [
       ).then((m) => m.CustomObservableComponent);
     },
   },
+  {
+    path: 'map-operator',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/map-operator/map-operator.component').then(
+        (m) => m.MapOperatorComponent
+      );
+    },
+  },
 ];
