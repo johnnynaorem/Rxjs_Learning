@@ -55,4 +55,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'filter-operator',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/filter-operator/filter-operator.component'
+      ).then((m) => m.FilterOperatorComponent);
+    },
+  },
 ];

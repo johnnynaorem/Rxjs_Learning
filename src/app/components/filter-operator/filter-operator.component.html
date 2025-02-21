@@ -1,0 +1,17 @@
+<h1>Filter-operator works!</h1>
+
+<h2>Ex-01(Filter the customer with name)</h2>
+<input type="text" [(ngModel)]="customerName" (change)="handleChange($event)" />
+<div>
+  <li *ngFor="let customer of customers">{{ customer | json }}</li>
+</div>
+
+<h2>Ex-02(Filter the length of the customer name)</h2>
+<input
+  type="text"
+  [(ngModel)]="customerNameLength"
+  (change)="handleLengthChange($event)"
+/>
+<div>
+  <li *ngFor="let customer of customers">{{ customer | json }}</li>
+</div>
