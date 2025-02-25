@@ -64,4 +64,22 @@ export const routes: Routes = [
       ).then((m) => m.FilterOperatorComponent);
     },
   },
+  {
+    path: 'tap-operator',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/tap-operator/tap-operator.component').then(
+        (m) => m.TapOperatorComponent
+      );
+    },
+  },
+  {
+    path: 'take-operator',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/take-operator/take-operator.component').then(
+        (m) => m.TakeOperatorComponent
+      );
+    },
+  },
 ];
