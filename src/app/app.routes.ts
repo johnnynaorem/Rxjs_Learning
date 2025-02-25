@@ -82,4 +82,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'retry-operator',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/retry-operator/retry-operator.component'
+      ).then((m) => m.RetryOperatorComponent);
+    },
+  },
 ];
