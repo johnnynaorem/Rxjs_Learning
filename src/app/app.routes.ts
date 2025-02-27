@@ -100,4 +100,13 @@ export const routes: Routes = [
       ).then((m) => m.DebounceTimeOperatorComponent);
     },
   },
+  {
+    path: 'subject',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/subject/subject.component').then(
+        (m) => m.SubjectComponent
+      );
+    },
+  },
 ];
