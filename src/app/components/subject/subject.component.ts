@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RxjsServiceService } from '../../rxjs-service.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { RxjsServiceService } from '../../rxjs-service.service';
   templateUrl: './subject.component.html',
   styleUrl: './subject.component.css',
 })
-export class SubjectComponent implements OnDestroy {
+export class SubjectComponent implements OnDestroy, OnInit {
   message: string = '';
   disMessage: string = '';
 
@@ -16,6 +16,10 @@ export class SubjectComponent implements OnDestroy {
   handleClick(input: any) {
     this.message = input.value;
     this.service.message.next(this.message);
+    this.service.message.subscribe((res) => (this.disMessage = res));
+  }
+
+  ngOnInit(): void {
     this.service.message.subscribe((res) => (this.disMessage = res));
   }
 
