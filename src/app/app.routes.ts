@@ -91,4 +91,13 @@ export const routes: Routes = [
       ).then((m) => m.RetryOperatorComponent);
     },
   },
+  {
+    path: 'debounce-time',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/debounce-time-operator/debounce-time-operator.component'
+      ).then((m) => m.DebounceTimeOperatorComponent);
+    },
+  },
 ];
