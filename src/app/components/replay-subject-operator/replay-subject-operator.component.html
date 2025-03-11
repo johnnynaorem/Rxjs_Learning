@@ -1,0 +1,41 @@
+<h2>replay-subject-operator works!</h2>
+
+<div>
+  <input type="text" #video />
+  <button (click)="onAddVideo(video)">Add Video</button>
+  <hr />
+</div>
+<div style="display: flex; justify-content: space-evenly">
+  <div>
+    <strong>user-1</strong>
+    <ul>
+      <li *ngFor="let item of user1">Video: {{ item }}</li>
+    </ul>
+  </div>
+  <div>
+    <strong>user-2</strong>
+    <ul>
+      <li *ngFor="let item of user2">Video: {{ item }}</li>
+    </ul>
+    <button
+      style="background-color: blue"
+      (click)="toggle()"
+      [ngStyle]="{ backgroundColor: isSubscribeMode1 ? 'red' : 'blue' }"
+    >
+      {{ isSubscribeMode1 ? "Unsubscribe" : "Subscribe" }}
+    </button>
+  </div>
+  <div>
+    <strong>user-3</strong>
+    <ul>
+      <li *ngFor="let item of user3">Video: {{ item }}</li>
+    </ul>
+    <button
+      style="background-color: blue"
+      (click)="toggleUser3()"
+      [ngStyle]="{ backgroundColor: isSubscribeMode2 ? 'red' : 'blue' }"
+    >
+      {{ isSubscribeMode2 ? "Unsubscribe" : "Subscribe" }}
+    </button>
+  </div>
+</div>

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RxjsServiceService {
-  // message = new Subject<string>();
-  message = new BehaviorSubject<string>('Hello');
+  message = new Subject<string>();
+  // message = new BehaviorSubject<string>('Hello');
+
+  videoEmit = new ReplaySubject<string>(5);
   constructor() {}
 
   printVideo(value: string) {

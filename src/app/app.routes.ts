@@ -109,4 +109,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'replay-subject',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/replay-subject-operator/replay-subject-operator.component'
+      ).then((m) => m.ReplaySubjectOperatorComponent);
+    },
+  },
 ];
