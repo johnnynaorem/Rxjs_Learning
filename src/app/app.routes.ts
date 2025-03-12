@@ -118,4 +118,13 @@ export const routes: Routes = [
       ).then((m) => m.ReplaySubjectOperatorComponent);
     },
   },
+  {
+    path: 'async-subject',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/async-subject/async-subject.component').then(
+        (m) => m.AsyncSubjectComponent
+      );
+    },
+  },
 ];

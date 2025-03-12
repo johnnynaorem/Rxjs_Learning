@@ -1,0 +1,12 @@
+<h2>async-subject works!</h2>
+
+<div>
+  <input type="text" #video />
+  <button (click)="handleAddVideo(video)">Add Video</button>
+</div>
+
+<hr />
+<div>
+  <p>Video: {{ asyncVideoEmit }}</p>
+  <button (click)="handleComplete()">Complete</button>
+</div>
