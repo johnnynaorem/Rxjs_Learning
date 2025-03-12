@@ -136,4 +136,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'merge-map',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/merge-map-operator/merge-map-operator.component'
+      ).then((m) => m.MergeMapOperatorComponent);
+    },
+  },
 ];
