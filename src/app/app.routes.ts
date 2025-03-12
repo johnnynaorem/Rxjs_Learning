@@ -127,4 +127,13 @@ export const routes: Routes = [
       );
     },
   },
+  {
+    path: 'concat-merge',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import('./components/concat-merge/concat-merge.component').then(
+        (m) => m.ConcatMergeComponent
+      );
+    },
+  },
 ];
