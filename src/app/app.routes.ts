@@ -154,4 +154,13 @@ export const routes: Routes = [
       ).then((m) => m.ConcatMapOperatorComponent);
     },
   },
+  {
+    path: 'switch-map',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/switch-map-operator/switch-map-operator.component'
+      ).then((m) => m.SwitchMapOperatorComponent);
+    },
+  },
 ];
