@@ -145,4 +145,13 @@ export const routes: Routes = [
       ).then((m) => m.MergeMapOperatorComponent);
     },
   },
+  {
+    path: 'concat-map',
+    pathMatch: 'full',
+    loadComponent: () => {
+      return import(
+        './components/concat-map-operator/concat-map-operator.component'
+      ).then((m) => m.ConcatMapOperatorComponent);
+    },
+  },
 ];
